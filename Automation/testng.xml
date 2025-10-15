@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM
+"https://testng.org/testing-1.0.dtd">
+<suite name="DemoQa Suite">
+	<test name= "DemoQa Tests">
+		<groups>
+			<run>
+				<include name="Smoke"/>
+				<include name="Regression"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.demoqa.tests.FormTests"/>
+			<class name="com.demoqa.tests.InteractionTest"/>
+			<class name="com.demoqa.tests.DDSformTest"/>
+		</classes>
+	</test>
+</suite>
