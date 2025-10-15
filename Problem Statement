@@ -1,0 +1,53 @@
+Problem Statement: Core Automation with Selenium & TestNG
+Core Objective
+You are to build a concise and effective test automation suite for the DemoQA website using Selenium WebDriver, Java, and the TestNG framework. This project will assess your core automation skills, including interacting with various web elements, handling common UI challenges like alerts and iFrames, and implementing data-driven tests with TestNG.
+
+Target Application
+URL: https://demoqa.com/
+Requirements
+1. Project Setup and Configuration
+Create a new Maven project.
+Configure your pom.xml to include the necessary dependencies:
+selenium-java
+testng
+webdrivermanager
+2. Test Scenario 1: Form Submission & Assertions
+Create a TestNG test class named FormTests.
+
+Text Box Submission:
+Navigate to the "Text Box" page (/text-box).
+Use appropriate locators to find and fill out the Full Name and Email fields.
+Click the "Submit" button.
+Use TestNG Assertions (Assert.assertEquals) to verify that the output text displayed below the form correctly contains the name and email you entered.
+Check Box Selection:
+Navigate to the "Check Box" page (/check-box).
+Programmatically expand the "Home" directory tree.
+Select the "Documents" checkbox.
+Assert that the result text displayed on the page confirms that "Documents" has been selected.
+3. Test Scenario 2: Handling Complex UI Elements
+Create a TestNG test class named InteractionTests.
+
+Handling Alerts:
+Navigate to the "Alerts" page (/alerts).
+Click the button that triggers a confirm box to appear.
+Use Selenium's Alert interface to switch to the popup and accept it.
+Assert that the confirmation message "You selected Ok" appears on the main page.
+Handling iFrames:
+Navigate to the "Frames" page (/frames).
+Switch the driver's focus to the iFrame present on the page.
+Read the heading text from inside the iFrame.
+Assert that the text is "This is a sample page".
+4. Test Scenario 3: Data-Driven Testing (Core Task)
+Create a TestNG test class named DataDrivenStudentFormTests.
+
+Data-Driven Form Submission:
+Navigate to the "Practice Form" page (/automation-practice-form).
+Create a @DataProvider method that provides two different, complete sets of student data (First Name, Last Name, Email, Gender, and Mobile Number).
+Create a @Test method that is linked to this data provider.
+The test should fill out the required fields (First Name, Last Name, Email, Gender, Mobile) using the data from the provider and submit the form.
+After each submission, assert that the student's name and email in the confirmation modal are correct.
+5. TestNG Configuration
+Annotations: Use annotations like @BeforeMethod to handle browser setup (e.g., creating the WebDriver instance and navigating to the base URL) and @AfterMethod to handle teardown (e.g., driver.quit()).
+Groups: Assign your test methods to different logical groups, such as "Smoke" and "Regression", using the groups attribute in the @Test annotation.
+Submission Guidelines :
+ensure that every task you complete is pushed in the github repo , ensure that you create and push the root directory (the folder which specifically has above files) to be shared as the submission .
